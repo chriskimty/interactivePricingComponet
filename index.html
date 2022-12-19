@@ -1,39 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Manrope:wght@600;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Interactive pricing component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main>
+    <div class="headerText">
+      <h1>Simple, traffic-based pricing</h1>
+      <h2>Sign-up for our 30-day trial. No credit card required.</h2>
+    </div>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+    <section class="component">
+      <div class="values">
+        <p><span class="pgViews"><!-- dynamic # --></span>Pageviews</p>
+        <p><span class="cost">$<!-- dynamic $ --></span>/month</p>
+      </div>
+      <div class="rangeSlider">
+        <input type="range" name="costRange" min="1" max="5" step="1" class="mySlider" id="mySlider">
+        <!-- how to do the actual dragging slider? -->
+        <img src="./images/icon-slider.svg" alt="slider icon">
+      </div>
+      <div class="billing">
+        <p>Monthly Billing</p>
+        <div class="toggle">
+          <label class="switch">
+            <input type="checkbox" id="toggleMe">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <p>Yearly Billing</p>
+      </div>
+      <!-- Position this one?  -->
+      <p class="discount">25% discount</p>
+      <hr>
+      <div class="info">
+        <div class="list">
+          <ul>
+            <li>
+              <img src="./images/icon-check.svg" alt="check icon">
+              <p>Unlimited websites</p>
+            </li>
 
-  Pageviews
-  $ /month
+            <li>
+              <img src="./images/icon-check.svg" alt="check icon">
+              <p>100% data ownership</p>
+            </li>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+            <li>
+              <img src="./images/icon-check.svg" alt="check icon">
+              <p>Email reports</p>
+            </li>
+          </ul>
+        </div>
+        <div class="button">
+          <button>Start my trial</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Chris Kim</a>.
   </div>
+
+  <script src="app.js"></script>
 </body>
+
 </html>
